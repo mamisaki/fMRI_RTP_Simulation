@@ -1,0 +1,28 @@
+# +++ Install CUDA +++
+https://developer.nvidia.com/cuda-downloads
+
+# +++ Install Anaconda python +++
+https://www.anaconda.com/download/#linux
+
+# +++ Install AFNI +++
+https://afni.nimh.nih.gov/pub/dist/doc/htmldoc/background_install/install_instructs/index.html
+
+# +++ Create anaconda environment:
+conda create -n RTiMRIPS python=3.7 pytorch spyder watchdog pandas xlrd matplotlib pyserial
+conda activate RTiMRIPS (or 'source activate RTiMRIPS')
+conda install -c conda-forge nibabel
+
+# +++ Build librtp.so +++
+conda activate RTiMRIPS (unless in RTiMRIPS environment)
+cd [downloaded_package_root]
+cd RTiMRIPS/afni_module
+
+# Clone AFNI src
+git clone https://github.com/afni/afni.git
+
+# Make
+sudo apt install libf2c2-dev libfftw3-dev libexpat1-dev libxt-dev
+cp `@GetAfniBin`/libmri.a ./
+make -f Makefile.librtp
+cp librtp.so ../
+

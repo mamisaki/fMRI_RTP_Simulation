@@ -1,0 +1,2 @@
+Idx,Func,Anat,ECG,Resp
+AA000,sample_data/AA000_sample_Func.nii.gz,sample_data/AA000_sample_Anat.nii.gz,sample_data/AA000_ECG.1D,sample_data/AA000_Resp.1D
