@@ -11,6 +11,7 @@ https://afni.nimh.nih.gov/pub/dist/doc/htmldoc/background_install/install_instru
 conda create -n RTiMRIPS python=3.7 pytorch spyder watchdog pandas xlrd matplotlib pyserial
 conda activate RTiMRIPS (or 'source activate RTiMRIPS')
 conda install -c conda-forge nibabel
+pip install pyparallel
 
 # +++ Build librtp.so +++
 conda activate RTiMRIPS (unless in RTiMRIPS environment)
