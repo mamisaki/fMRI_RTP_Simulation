@@ -16,7 +16,7 @@ import nibabel as nib
 import torch
 import shutil
 import argparse
-from RTiMRIPS.rtp_simulation import RTP_SIM
+from fMRIRTPSpy.rtp_simulation import RTP_SIM
 
 WORK_OUTPUT = Path('sample_RTP_out')
 if not WORK_OUTPUT.is_dir():
